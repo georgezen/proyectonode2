@@ -4,4 +4,24 @@
     <%= titulo %>
   </h1>
 
+  <table class="table table-hover table-bordered">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Nombre</th>
+        <th>Correo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% data.forEach(element => {%>
+      <tr>
+        <td><%= element.id %></td>
+        <td><%= element.name %></td>
+        <td><%= element.email %></td>
+      </tr>
+      <% }); %>
+
+    </tbody>
+  </table>
+
 <%- include('plantilla/footer',{ footer: 'footer' }) %>
